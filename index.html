@@ -30,7 +30,7 @@
     <a class="mark" href="#top"><i aria-hidden="true"></i> kevin</a>
     <nav class="menu">
       <a href="#about">about</a>
-      <a href="#writeups">work</a>
+      <a href="#work">work</a>
       <a href="#resume">resume</a>
       <a href="#contact">contact</a>
     </nav>
@@ -131,7 +131,6 @@
         <h2><em>SELECT</em>stuff i've actually shipped</h2>
         <div>
           <p class="prose" style="color:var(--ink-3); font-size:0.9375rem;">no filler projects, promise.</p>
-          <p style="margin-top:var(--s2);"><a class="btn-quiet" href="#writeups">read the full write-ups</a></p>
         </div>
       </div>
 
@@ -244,212 +243,6 @@
       </div>
     </section>
 
-    <!-- ================= write-ups ================= -->
-    <section class="band" id="writeups">
-
-      <!-- ---------------- 01 The Exodus ---------------- -->
-      <article class="band">
-        <div class="entry-card entry-card-01">
-          <div class="entry-head dither-shu">
-            <span class="bit">01</span>
-            <svg width="22" height="22" viewBox="0 0 10 10" shape-rendering="crispEdges" aria-hidden="true">
-              <rect x="0" y="1" width="6" height="4" fill="#1E1A16"/>
-              <rect x="1" y="2" width="4" height="1" fill="#FFFCF3"/>
-              <rect x="1" y="5" width="1" height="1" fill="#1E1A16"/>
-              <rect x="4" y="5" width="6" height="4" fill="#1E1A16"/>
-              <rect x="5" y="6" width="4" height="1" fill="#FFFCF3"/>
-              <rect x="8" y="4" width="1" height="1" fill="#1E1A16"/>
-            </svg>
-          </div>
-          <div class="entry-inner">
-            <div class="entry-side">
-              <div class="entry-meta">
-                <span class="bit">FLASK &middot; REACT &middot; VITE</span>
-                <span class="bit">NVIDIA NIM / NEMOTRON</span>
-                <span class="bit">1ST PLACE &mdash; JITUME</span>
-              </div>
-            </div>
-            <div class="entry-main">
-              <h3 class="entry-name">The Exodus</h3>
-              <p class="entry-tag">An AI pipeline that turns meeting notes into client proposals.</p>
-
-              <h4>The problem</h4>
-              <p>GDF Kenya, a communications agency, was losing days to manual proposal turnaround. Every
-              client meeting produced notes that somebody then had to reshape into a formal document, by
-              hand, every single time.</p>
-
-              <h4>What I built</h4>
-              <p>A two-agent pipeline. The first agent, the Brief Generator, reads raw meeting notes and
-              produces a structured brief. The second, the Proposal Generator, takes that brief and writes
-              a production-ready proposal. Splitting it in two mattered — a single agent trying to do both
-              jobs drifted off the client's actual requirements.</p>
-              <p>Flask and SQLAlchemy on the backend, React with Vite and Tailwind on the frontend, agent
-              logic running on NVIDIA NIM/Nemotron.</p>
-
-              <h4>What it taught me</h4>
-              <p>That agent design is mostly about scoping each agent narrowly enough that its output is
-              predictable. Also that 48 hours is enough time to ship something real if you decide early
-              what you are <em>not</em> building.</p>
-
-              <div class="entry-links">
-                <a class="btn" href="https://the-exodus-delta.vercel.app/" target="_blank" rel="noopener noreferrer">open live</a>
-                <a class="btn-line" href="https://github.com/Dapper434/ProjectGen" target="_blank" rel="noopener noreferrer">source</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- ---------------- 02 Clinvia ---------------- -->
-      <article class="band">
-        <div class="entry-card entry-card-02">
-          <div class="entry-head dither-ai">
-            <span class="bit">02</span>
-            <svg width="22" height="22" viewBox="0 0 10 10" shape-rendering="crispEdges" aria-hidden="true">
-              <rect x="4" y="1" width="2" height="8" fill="#1E1A16"/>
-              <rect x="1" y="4" width="8" height="2" fill="#1E1A16"/>
-              <rect x="4" y="2" width="1" height="1" fill="#FFFCF3"/>
-            </svg>
-          </div>
-          <div class="entry-inner">
-            <div class="entry-side">
-              <div class="entry-meta">
-                <span class="bit">REACT</span>
-                <span class="bit">SUPABASE / POSTGRESQL</span>
-                <span class="bit">3RD PLACE &mdash; MORINGA</span>
-              </div>
-            </div>
-            <div class="entry-main">
-              <h3 class="entry-name">Clinvia</h3>
-              <p class="entry-tag">A digital health platform for tracking TB patients and their care progress.</p>
-
-              <h4>The problem</h4>
-              <p>Tuberculosis treatment runs for months and depends on patients actually taking their doses.
-              Tracking that on paper makes it hard to spot the person who stopped showing up three weeks ago
-              — which is exactly the person who needs following up.</p>
-
-              <h4>What I built</h4>
-              <p>A platform for recording patient data and care progress, React on the frontend and
-              Supabase/PostgreSQL behind it. I owned the Supabase integration end to end: Row-Level Security
-              policies, schema migrations, and environment configuration.</p>
-
-              <h4>What it taught me</h4>
-              <p>Row-Level Security, properly. Patient data is the case where getting authorisation wrong is
-              not a bug, it's a breach — so the access rules had to live in the database, not in the
-              frontend where anyone could route around them. That's the habit I brought to everything after
-              this.</p>
-
-              <div class="entry-links">
-                <a class="btn" href="https://clinvia-indol.vercel.app/" target="_blank" rel="noopener noreferrer">open live</a>
-                <a class="btn-line" href="https://github.com/Dapper434/Clinvia" target="_blank" rel="noopener noreferrer">source</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- ---------------- 03 SokoCredit ---------------- -->
-      <article class="band">
-        <div class="entry-card entry-card-03">
-          <div class="entry-head dither-gold">
-            <span class="bit">03</span>
-            <svg width="22" height="22" viewBox="0 0 10 10" shape-rendering="crispEdges" aria-hidden="true">
-              <rect x="1" y="2" width="8" height="6" fill="#1E1A16"/>
-              <rect x="2" y="3" width="6" height="4" fill="#FFFCF3"/>
-              <rect x="3" y="4" width="4" height="1" fill="#1E1A16"/>
-              <rect x="3" y="6" width="2" height="1" fill="#1E1A16"/>
-            </svg>
-          </div>
-          <div class="entry-inner">
-            <div class="entry-side">
-              <div class="entry-meta">
-                <span class="bit">REACT / VITE / TAILWIND</span>
-                <span class="bit">FLASK / SQLALCHEMY / JWT</span>
-                <span class="bit">TEAM BUILD</span>
-              </div>
-            </div>
-            <div class="entry-main">
-              <h3 class="entry-name">SokoCredit</h3>
-              <p class="entry-tag">Loan management for microfinance lenders and the market traders they lend to.</p>
-
-              <h4>The problem</h4>
-              <p>Small-scale traders and market vendors need credit, but a first-time borrower and a
-              long-standing one are not the same risk, and lenders had no fair way to tell them apart.
-              Size the loan wrong in either direction and somebody loses.</p>
-
-              <h4>What I built</h4>
-              <p>Part of a team on a multi-tenant platform with two faces: a mobile-first Customer portal
-              for savings and loans, and a desktop Lender portal for approvals, CRM and operations. Within
-              a six-module architecture, I owned the Analytics &amp; Reporting module and the credit-scoring
-              logic.</p>
-              <p>The scoring model uses a mandatory savings gate plus a point-based credit tier — A, B or C
-              — which then drives borrowing limits and how closely a loan gets reviewed. React, Vite and
-              Tailwind on the front, Flask, SQLAlchemy and JWT behind.</p>
-
-              <h4>What it taught me</h4>
-              <p>That a credit model is a policy decision wearing an algorithm's clothes. Every threshold I
-              set was really a judgement about who deserves how much trust, and writing that down honestly
-              was harder than implementing it.</p>
-
-              <div class="entry-links">
-                <a class="btn" href="https://soko-credit-client.vercel.app/" target="_blank" rel="noopener noreferrer">open live</a>
-                <a class="btn-line" href="https://github.com/Dapper434/SokoCredit_Client" target="_blank" rel="noopener noreferrer">source</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- ---------------- 04 Sokolink ---------------- -->
-      <article class="band">
-        <div class="entry-card entry-card-04">
-          <div class="entry-head dither">
-            <span class="bit">04</span>
-            <svg width="22" height="22" viewBox="0 0 10 10" shape-rendering="crispEdges" aria-hidden="true">
-              <rect x="1" y="3" width="8" height="1" fill="#1E1A16"/>
-              <rect x="2" y="4" width="6" height="4" fill="#1E1A16"/>
-              <rect x="3" y="5" width="4" height="2" fill="#FFFCF3"/>
-              <rect x="3" y="1" width="1" height="2" fill="#1E1A16"/>
-              <rect x="6" y="1" width="1" height="2" fill="#1E1A16"/>
-            </svg>
-          </div>
-          <div class="entry-inner">
-            <div class="entry-side">
-              <div class="entry-meta">
-                <span class="bit">REACT</span>
-                <span class="bit">M-PESA (IN PROGRESS)</span>
-                <span class="bit">SOLO BUILD</span>
-              </div>
-            </div>
-            <div class="entry-main">
-              <h3 class="entry-name">Sokolink</h3>
-              <p class="entry-tag">A marketplace that puts small sellers in front of buyers directly.</p>
-
-              <h4>The problem</h4>
-              <p>Small sellers who want to reach customers online usually have to rent someone else's
-              audience — a heavier third-party marketplace that takes a cut and owns the relationship.</p>
-
-              <h4>What I built</h4>
-              <p>A full-stack marketplace connecting buyers and sellers, frontend and backend both, solo.
-              React on the frontend, with M-Pesa integration underway so payments can happen inside the
-              platform rather than over a WhatsApp thread.</p>
-
-              <h4>What it taught me</h4>
-              <p>How much of a marketplace is not the catalogue. Listings were the easy part; trust,
-              payment and the shape of the seller's day were the real design problems. Building it alone
-              also meant every shortcut I took came back to find me.</p>
-
-              <div class="entry-links">
-                <a class="btn" href="https://sokolink-frontend.vercel.app/" target="_blank" rel="noopener noreferrer">open live</a>
-                <a class="btn-line" href="https://github.com/Dapper434/Sokolink-Client" target="_blank" rel="noopener noreferrer">source</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-
-    </section>
-
     <!-- ================= resume ================= -->
     <section class="band" id="resume">
       <div class="resume">
@@ -480,7 +273,7 @@
   <footer class="foot">
     <span class="bit">KEVIN ONGARO</span>
     <nav class="foot-links">
-      <a href="#writeups">work</a>
+      <a href="#work">work</a>
       <a href="#resume">resume</a>
       <a href="#contact">contact</a>
     </nav>
