@@ -513,113 +513,6 @@ h1{
 }
 .tag-row{display:flex; gap:var(--u); flex-wrap:wrap;}
 
-/* ============================================================
-   write-ups — the long-form section under the card grid
-   ============================================================ */
-
-/* the write-ups section owns its own rhythm: the cards inside it are
-   siblings in one band, so they drop the divider rule and tighten up. */
-#writeups .band{border-top:none; padding:var(--s4) 0;}
-
-.page-head{
-  padding:0 0 var(--s5);
-  max-width:760px;
-}
-.writeups-title{
-  font-family:'Zen Kaku Gothic New', sans-serif;
-  font-weight:900;
-  font-size:clamp(1.9rem, 3.6vw, 2.75rem);
-  line-height:1.14;
-  letter-spacing:-0.025em;
-  max-width:24ch;
-}
-
-/* the card component from the work grid, carried onto the write-ups */
-.entry-card{
-  border:2px solid var(--ink);
-  background:var(--paper-2);
-  box-shadow:var(--s1) var(--s1) 0 var(--rule);
-  transition:box-shadow 0.12s steps(2);
-}
-.entry-card-01:hover{ box-shadow:var(--s1) var(--s1) 0 var(--shu); }
-.entry-card-02:hover{ box-shadow:var(--s1) var(--s1) 0 var(--ai); }
-.entry-card-03:hover{ box-shadow:var(--s1) var(--s1) 0 var(--gold); }
-.entry-card-04:hover{ box-shadow:var(--s1) var(--s1) 0 var(--ink-3); }
-
-.entry-head{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:var(--s2);
-  padding:var(--s2) var(--s3);
-  border-bottom:2px solid var(--ink);
-}
-.entry-head .bit{
-  font-size:14px;
-  color:var(--ink);
-}
-
-.entry-inner{
-  display:grid;
-  grid-template-columns:200px 1fr;
-  gap:var(--s5);
-  align-items:start;
-  padding:var(--s4);
-}
-.entry-side{
-  display:flex;
-  flex-direction:column;
-  gap:var(--s2);
-  border-right:1px solid var(--rule);
-  padding-right:var(--s3);
-}
-.entry-meta{
-  display:flex;
-  flex-direction:column;
-  gap:var(--s1);
-}
-.entry-meta .bit{line-height:1.5; color:var(--ink-2);}
-
-.entry-main{max-width:62ch;}
-.entry-name{
-  font-weight:900;
-  font-size:clamp(1.75rem, 3vw, 2.25rem);
-  letter-spacing:-0.025em;
-  line-height:1.15;
-}
-.entry-tag{
-  margin-top:var(--s1);
-  font-size:1.125rem;
-  font-weight:500;
-  color:var(--shu);
-  line-height:1.5;
-}
-.entry-main h4{
-  font-family:'Silkscreen', monospace;
-  font-size:10px;
-  font-weight:400;
-  color:var(--ink-3);
-  margin-top:var(--s4);
-  margin-bottom:var(--s1);
-}
-.entry-main p{
-  color:var(--ink-2);
-  font-size:1.0625rem;
-}
-.entry-main p + p{margin-top:var(--s2);}
-.entry-main em{
-  font-style:normal;
-  background:var(--gold-wash);
-  padding:0 var(--u);
-  color:var(--ink);
-}
-.entry-links{
-  display:flex;
-  gap:var(--s2);
-  flex-wrap:wrap;
-  margin-top:var(--s4);
-}
-
 /* ---------- resume ---------- */
 .resume{
   background:var(--ink);
@@ -716,16 +609,6 @@ h1{
   .inv-cell:nth-child(2n){border-right:none;}
   .inv-cell:nth-last-child(-n+5){border-bottom:1px solid var(--rule);}
   .inv-cell:nth-last-child(-n+2){border-bottom:none;}
-
-  .entry-inner{grid-template-columns:1fr; gap:var(--s3); padding:var(--s3);}
-  .entry-side{
-    border-right:none;
-    border-bottom:1px solid var(--rule);
-    padding-right:0;
-    padding-bottom:var(--s2);
-  }
-  .entry-meta{flex-direction:row; flex-wrap:wrap; gap:var(--s2);}
-  .page-head{padding:0 0 var(--s4);}
 }
 
 @media (max-width:640px){
@@ -738,7 +621,6 @@ h1{
   .hi{order:2;}
   .resume{padding:var(--s3);}
   .lede{font-size:1.125rem;}
-  #writeups .band{padding:var(--s3) 0;}
 }
 
 @media (prefers-reduced-motion: reduce){
