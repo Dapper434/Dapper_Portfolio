@@ -22,4 +22,4 @@ Static site on Vercel — no build command, output directory is the repo root.
 ## Notes
 
 `Kevin_Ongaro_CV.pdf` must sit in the repo root; the résumé button links to it
-directly. See [CLAUDE.md](CLAUDE.md) for the design rules and content facts.
+directly. 
